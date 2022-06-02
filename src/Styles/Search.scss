@@ -1,0 +1,73 @@
+@import "./Globals.scss";
+
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  height: 100%;
+  flex-grow: 1;
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      border: 2px solid $colorDarkGray;
+      background: $colorBlack;
+      color: $colorWhite;
+      height: 25px;
+      padding: 0 10px;
+      border-radius: $smRadius;
+      font-size: large;
+      margin-right: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      border: 2px solid transparent;
+      background: $colorAccent;
+      padding: 2px 10px;
+      font-size: large;
+      border-radius: $smRadius;
+    }
+  }
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    .title {
+      color: $colorWhite;
+    }
+
+    .container {
+      display: grid;
+      flex-grow: 1;
+      justify-items: center;
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width: $x-small) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (min-width: $medium) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (min-width: $large) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  .noresults {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    margin-top: 100px;
+    color: $colorWhite;
+  }
+}

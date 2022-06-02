@@ -1,0 +1,26 @@
+@import "./Globals.scss";
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $footerHeight;
+  background: $colorBlack;
+
+  .tag {
+    margin-right: 10px;
+    font-size: small;
+    font-weight: 600;
+    color: $colorGray;
+    height: 20px;
+  }
+
+  .tvm-logo {
+    height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "./Globals.scss";
+
+.detail {
+  margin: 40px 50px;
+  padding: 40px 60px;
+  border-radius: $mdRadius;
+  background: $colorBackground;
+  max-width: 90%;
+
+  .image {
+    aspect-ratio: 0.67;
+    max-width: 200px;
+    margin-right: 20px;
+
+    @media screen and (min-width: $small) {
+      float: left;
+      max-width: 200px;
+    }
+
+    @media screen and (min-width: $medium) {
+      float: left;
+      max-width: 250px;
+    }
+
+    @media screen and (min-width: $large) {
+      float: left;
+      max-width: 300px;
+    }
+  }
+
+  .title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    .icon {
+      height: 60%;
+      margin-right: 10px;
+    }
+
+    .text {
+      @media screen and (min-width: $x-small) {
+        font-size: 25px;
+      }
+
+      @media screen and (min-width: $medium) {
+        font-size: 30px;
+      }
+
+      @media screen and (min-width: $large) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .description {
+    margin-top: 20px;
+    max-width: 900px;
+
+    @media screen and (min-width: $x-small) {
+      font-size: medium;
+      line-height: 20px;
+    }
+
+    @media screen and (min-width: $medium) {
+      font-size: large;
+      line-height: 25px;
+    }
+
+    @media screen and (min-width: $large) {
+      font-size: large;
+      line-height: 30px;
+    }
+  }
+}

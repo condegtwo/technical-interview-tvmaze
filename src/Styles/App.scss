@@ -1,0 +1,54 @@
+@import "./Globals.scss";
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0004;
+  backdrop-filter: blur(5px);
+  color: #cacaca;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  margin: $headerHeight auto 0 auto;
+  flex-grow: 1;
+  // min-width: 1000px;
+  overflow: hidden;
+
+  // @media screen and (min-width: $small) {
+  //   max-width: $small;
+  // }
+
+  // @media screen and (min-width: $medium) {
+  //   max-width: $medium;
+  // }
+
+  // @media screen and (min-width: $large) {
+  //   max-width: $large;
+  // }
+}
+
+.spinner {
+  height: 40px;
+  width: 40px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid $colorAccent;
+  border-left: 4px solid $colorAccent;
+  border-radius: 999px;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
