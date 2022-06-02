@@ -20,6 +20,12 @@ $smRadius: 2px;
 $mdRadius: 4px;
 
 //Loading Spinner
+.spinner-container {
+  display: grid;
+  place-content: center;
+  padding: 20px;
+}
+
 .spinner {
   height: 40px;
   width: 40px;

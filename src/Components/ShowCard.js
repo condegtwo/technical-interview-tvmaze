@@ -17,15 +17,15 @@ const ShowCard = ({ id, img, rating, name, genres }) => {
 
   return (
     <div className="showcard" onClick={handleDetails}>
-      {rating && <div className="showcard-rating">{formatRating(rating)}</div>}
-      <img className="showcard-image" src={img || noImage} alt="" />
-      <div className="showcard-details">
-        <span className="showcard-details-rating">{formatRating(rating)}</span>
-        <span className="showcard-details-name">{name}</span>
+      {rating && <div className="rating">{formatRating(rating)}</div>}
+      <img className="image" src={img || noImage} alt="" />
+      <div className="details">
+        <span className="details-rating">{formatRating(rating)}</span>
+        <span className="details-name">{name}</span>
         {genres &&
           !!genres.length &&
           genres.map((genre, i) => (
-            <span className="showcard-details-genre" key={i}>
+            <span className="details-genre" key={i}>
               {genre}
             </span>
           ))}
