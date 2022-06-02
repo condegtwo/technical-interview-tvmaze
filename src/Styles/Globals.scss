@@ -12,7 +12,6 @@ $colorGray: #a0a0a0;
 $colorDarkGray: #4d4d4d;
 $colorBlack: #1d1d1d;
 
-
 //Sizes
 $headerHeight: 70px;
 $logoWidth: 70px;
@@ -20,5 +19,24 @@ $footerHeight: 50px;
 $smRadius: 2px;
 $mdRadius: 4px;
 
+//Loading Spinner
+.spinner {
+  height: 40px;
+  width: 40px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid $colorAccent;
+  border-left: 4px solid $colorAccent;
+  border-radius: 999px;
 
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
